@@ -8,4 +8,4 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? '/sumedha-parande-portfolio/' : '',
 }
 
-module.exports = nextConfig 
+export default nextConfig 
