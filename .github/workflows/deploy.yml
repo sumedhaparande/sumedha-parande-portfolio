@@ -2,23 +2,38 @@ name: Deploy Next.js Project
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - master
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+      - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+
+      - name: Debug - List files
+        run: |
+          pwd
+          ls -la
+          git branch
 
       - name: Install dependencies
         run: npm ci
