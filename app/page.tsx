@@ -7,7 +7,6 @@ import { Mail, Linkedin, MapPin, Phone, Download, Github, ExternalLink, CheckCir
 import { Progress } from "@/components/ui/progress"
 import { Suspense } from "react"
 import Loading from "./components/loading"
-import ImageLoader from "./components/image-loader"
 import ProfileImage from "./components/profile-image"
 
 export default function Home() {
@@ -16,81 +15,85 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
         {/* Navigation */}
         <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
-          <div className="container flex h-16 items-center justify-between">
-            <div className="font-semibold text-xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Sumedha Parande</div>
-            <nav className="hidden md:flex gap-6">
-              {["About", "Skills", "Experience", "Education", "Certifications", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-sm font-medium hover:text-purple-600 transition-colors relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div className="flex h-16 items-center justify-between">
+              <div className="font-semibold text-xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Sumedha Parande</div>
+              <nav className="hidden md:flex gap-6">
+                {["About", "Skills", "Experience", "Education", "Certifications", "Contact"].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="text-sm font-medium hover:text-purple-600 transition-colors relative group"
+                  >
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                  </a>
+                ))}
+              </nav>
+              <Button variant="outline" size="sm" className="hidden md:flex border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105">
+                <Download className="mr-2 h-4 w-4" />
+                <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  Resume
                 </a>
-              ))}
-            </nav>
-            <Button variant="outline" size="sm" className="hidden md:flex bg-purple-600 text-white hover:bg-purple-700 hover:text-white border-none transition-all hover:scale-105">
-              <Download className="mr-2 h-4 w-4" />
-              <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                Resume
-              </a>
-            </Button>
+              </Button>
+            </div>
           </div>
         </header>
 
-        <main className="container py-8 space-y-20">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 space-y-20">
           {/* Hero Section */}
-          <section id="hero" className="py-12 md:py-24 flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 group">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse blur-md opacity-70 group-hover:opacity-100 transition-opacity"></div>
-              <ProfileImage />
-            </div>
-            <div className="text-center md:text-left space-y-4 md:flex-1">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in">
-                Sumedha Parande
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-medium text-purple-600 animate-fade-in-delay-1">
-                Senior Software Quality Engineer
-              </h2>
-              <p className="text-lg text-slate-600 max-w-2xl animate-fade-in-delay-2">
-                Experienced Software Quality Engineer with over 3 years of expertise in both manual and automated testing. 
-                Skilled in developing robust test automation frameworks using Selenium WebDriver and Java, while maintaining 
-                strong manual testing capabilities in exploratory testing, UAT, and regression testing. Passionate about 
-                delivering high-quality software through comprehensive testing strategies.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start animate-fade-in-delay-3">
-                <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Manual Testing</Badge>
-                <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Test Automation</Badge>
-                <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Selenium</Badge>
-                <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">API Testing</Badge>
-                <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Quality Assurance</Badge>
+          <section id="hero" className="py-12 md:py-24">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-16 max-w-7xl mx-auto">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 group">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse blur-md opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                <ProfileImage />
               </div>
-              <div className="flex gap-4 justify-center md:justify-start pt-4 animate-fade-in-delay-4">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white transition-all hover:scale-105 group">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Contact Me
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105 group">
-                  <Download className="mr-2 h-4 w-4" />
-                  <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                    Download CV
-                  </a>
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+              <div className="text-center md:text-left space-y-6 flex-1">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in">
+                  Sumedha Parande
+                </h1>
+                <h2 className="text-2xl md:text-3xl font-medium text-purple-600 animate-fade-in-delay-1">
+                  Senior Software Quality Engineer
+                </h2>
+                <p className="text-lg text-slate-600 animate-fade-in-delay-2">
+                  Experienced Software Quality Engineer with over 3 years of expertise in both manual and automated testing. 
+                  Skilled in developing robust test automation frameworks using Selenium WebDriver and Java, while maintaining 
+                  strong manual testing capabilities in exploratory testing, UAT, and regression testing. Passionate about 
+                  delivering high-quality software through comprehensive testing strategies.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start animate-fade-in-delay-3">
+                  <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Manual Testing</Badge>
+                  <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Test Automation</Badge>
+                  <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Selenium</Badge>
+                  <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">API Testing</Badge>
+                  <Badge className="px-3 py-1 bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors">Quality Assurance</Badge>
+                </div>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4 animate-fade-in-delay-4">
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white transition-all hover:scale-105 group">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Contact Me
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                  <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105 group">
+                    <Download className="mr-2 h-4 w-4" />
+                    <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      Download CV
+                    </a>
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
 
           {/* About Section */}
           <section id="about" className="scroll-mt-20">
-            <div className="space-y-6">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">About Me</h2>
               </div>
-              <p className="text-lg text-slate-600 max-w-4xl">
+              <p className="text-lg text-slate-600">
                 I am a dedicated Software Quality Engineer with a balanced approach to software testing, combining strong 
                 manual testing expertise with advanced automation capabilities. With 3 years of experience at Infosys, 
                 I have developed comprehensive testing strategies that leverage both manual and automated testing methods 
@@ -143,7 +146,7 @@ export default function Home() {
 
           {/* Skills Section */}
           <section id="skills" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Technical Skills</h2>
@@ -281,7 +284,7 @@ export default function Home() {
 
           {/* Experience Section */}
           <section id="experience" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Work Experience</h2>
@@ -348,7 +351,7 @@ export default function Home() {
 
           {/* Projects Section */}
           <section id="projects" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Test Automation Projects</h2>
@@ -484,7 +487,7 @@ export default function Home() {
 
           {/* Test Metrics Section */}
           <section id="metrics" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Testing Metrics & Achievements</h2>
@@ -586,7 +589,7 @@ export default function Home() {
 
           {/* Manual Testing Section */}
           <section id="manual-testing" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Manual Testing Expertise</h2>
@@ -617,7 +620,7 @@ export default function Home() {
                         <CheckCircle2 className="h-5 w-5 text-purple-600 flex-shrink-0 mt-1" />
                         <div>
                           <span className="font-medium">Regression Testing</span>
-                          <p className="text-sm text-slate-600">Ensuring new changes don't affect existing functionality</p>
+                          <p className="text-sm text-slate-600">Ensuring new changes don&apos;t affect existing functionality</p>
                         </div>
                       </li>
                       <li className="flex gap-2">
@@ -750,7 +753,7 @@ export default function Home() {
 
           {/* Education Section */}
           <section id="education" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Education</h2>
@@ -782,7 +785,7 @@ export default function Home() {
 
           {/* Certifications Section */}
           <section id="certifications" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Certifications</h2>
@@ -891,7 +894,7 @@ export default function Home() {
 
           {/* Contact Section */}
           <section id="contact" className="scroll-mt-20">
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-7xl mx-auto">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-pink-600"></div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Contact Me</h2>
@@ -1018,7 +1021,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="border-t bg-white py-8">
-          <div className="container">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-center md:text-left">
                 <p className="font-semibold text-lg bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Sumedha Parande</p>
