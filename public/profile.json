@@ -1,0 +1,161 @@
+{
+  "personal": {
+    "name": "Sumedha Parande",
+    "title": "Senior Software Quality Engineer",
+    "description": "Passionate Software Quality Engineer with over 3 years of expertise in test automation, API testing, and quality assurance. Specializing in Selenium WebDriver, Java, and modern testing frameworks to deliver robust and reliable software solutions.",
+    "location": "Pune, Maharashtra",
+    "email": "sumedhapparande@gmail.com",
+    "phone": "+91 7744010096",
+    "linkedin": "https://linkedin.com/in/sumedha-parande/",
+    "github": "https://github.com",
+    "resume": "/Sumedhe_Parande_Resume.pdf",
+    "profileImage": "/sumedha_profile_pic.png"
+  },
+  "skills": {
+    "testing": [
+      { "name": "Agile and Scrum methodologies", "level": "Advanced", "value": 90 },
+      { "name": "Manual Testing", "level": "Expert", "value": 95 },
+      { "name": "Regression Testing", "level": "Advanced", "value": 92 },
+      { "name": "API Testing", "level": "Expert", "value": 95 },
+      { "name": "UI Testing", "level": "Advanced", "value": 88 },
+      { "name": "Sanity Testing", "level": "Advanced", "value": 90 },
+      { "name": "Functional Testing", "level": "Expert", "value": 93 },
+      { "name": "Cross-Browser Testing", "level": "Advanced", "value": 89 },
+      { "name": "Performance Testing", "level": "Intermediate", "value": 85 }
+    ],
+    "tools": [
+      { "name": "SoapUI", "level": "Advanced", "value": 88 },
+      { "name": "Git & GitHub", "level": "Expert", "value": 92 },
+      { "name": "TestNG", "level": "Expert", "value": 95 },
+      { "name": "Postman", "level": "Advanced", "value": 90 },
+      { "name": "Jenkins", "level": "Advanced", "value": 87 },
+      { "name": "CI/CD", "level": "Advanced", "value": 89 },
+      { "name": "Jira", "level": "Expert", "value": 93 },
+      { "name": "Xray", "level": "Advanced", "value": 88 },
+      { "name": "Zephyr", "level": "Advanced", "value": 86 },
+      { "name": "SOAP", "level": "Advanced", "value": 87 },
+      { "name": "RestAssured", "level": "Expert", "value": 91 },
+      { "name": "JMeter", "level": "Intermediate", "value": 85 },
+      { "name": "Cypress", "level": "Advanced", "value": 88 },
+      { "name": "AWS", "level": "Intermediate", "value": 84 }
+    ],
+    "automation": [
+      { "name": "Selenium", "level": "Expert", "value": 95 },
+      { "name": "Web Driver", "level": "Expert", "value": 94 },
+      { "name": "Maven", "level": "Advanced", "value": 90 },
+      { "name": "SDLC", "level": "Expert", "value": 92 },
+      { "name": "STLC", "level": "Expert", "value": 93 },
+      { "name": "Web Automation", "level": "Expert", "value": 94 },
+      { "name": "JSON", "level": "Advanced", "value": 89 },
+      { "name": "XML", "level": "Advanced", "value": 88 },
+      { "name": "POJO classes", "level": "Advanced", "value": 90 }
+    ],
+    "languages": [
+      { "name": "Java", "level": "Expert", "value": 93 },
+      { "name": "OOPS concepts", "level": "Expert", "value": 94 },
+      { "name": "SQL", "level": "Advanced", "value": 90 },
+      { "name": "HTML", "level": "Advanced", "value": 88 },
+      { "name": "CSS", "level": "Intermediate", "value": 85 },
+      { "name": "JavaScript", "level": "Intermediate", "value": 84 }
+    ],
+    "other": [
+      { "name": "Team Collaboration", "level": "Expert", "value": 95 },
+      { "name": "Problem Solving", "level": "Expert", "value": 94 },
+      { "name": "Documentation", "level": "Advanced", "value": 90 },
+      { "name": "Test Planning", "level": "Expert", "value": 92 },
+      { "name": "Test Strategy", "level": "Advanced", "value": 91 }
+    ]
+  },
+  "experience": [
+    {
+      "title": "Senior System Engineer - Software Quality",
+      "company": "INFOSYS LTD.",
+      "location": "Pune, MH",
+      "period": "July 2022–Present",
+      "achievements": [
+        "Designed and developed automation frameworks using Selenium WebDriver and Java, integrating best practices such as the Page Object Model.",
+        "Utilized API testing tools like SoapUI to test RESTful APIs, ensuring thorough understanding of SOAP and REST principles. Demonstrated expertise in microservices architecture, contributing to the development of robust API automation frameworks.",
+        "Gained hands-on experience with GUI-based test automation tools for desktop applications, enhancing efficiency in testing processes.",
+        "Proficiently wrote SQL queries to support data-driven testing. Experienced in parsing complex JSON and XML data using serialization techniques like POJO classes for data validation.",
+        "Applied BDD and TDD methodologies using tools like TestNG and Cucumber. Contributed to building CI/CD pipelines using Maven and Git, ensuring seamless integration of automated tests into the development lifecycle."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Engineering in Civil Engineering",
+      "institution": "Savitribai Phule Pune University",
+      "period": "July 2017 - June 2021"
+    },
+    {
+      "degree": "Higher Secondary Certificate (H.S.C.)",
+      "institution": "Maharashtra State Board",
+      "period": "June 2016 - March 2017"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Certified Cloud Practitioner",
+      "issuer": "AWS",
+      "year": "2023",
+      "month": "December",
+      "image": "/certifications/AWS Certified Cloud Practitioner_page-0001.jpg"
+    },
+    {
+      "title": "MasterClass Software Testing with Jira & Agile",
+      "issuer": "Udemy",
+      "year": "2023",
+      "month": "November",
+      "image": "/certifications/MasterClass Software Testing with Jira & Agile.jpg"
+    },
+    {
+      "title": "Java SE8 Developer",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "October",
+      "image": "/certifications/Java SE8 Developer_page-0001.jpg"
+    },
+    {
+      "title": "MySQL Associate",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "September",
+      "image": "/certifications/MySQL Associate_page-0001.jpg"
+    },
+    {
+      "title": "JavaScript Developer",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "August",
+      "image": "/certifications/JavaScript Developer_page-0001.jpg"
+    },
+    {
+      "title": "Selenium Webdriver",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "July",
+      "image": "/certifications/Selenium Webdriver.jpeg"
+    },
+    {
+      "title": "API Testing with Postman",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "June",
+      "image": "/certifications/API_Testing_With_Postman.jpeg"
+    },
+    {
+      "title": "Learn Test Management Using HP ALM",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "May",
+      "image": "/certifications/Learn Test Management Using HP ALM.jpeg"
+    },
+    {
+      "title": "Adobe Experience Manager",
+      "issuer": "Infosys",
+      "year": "2022",
+      "month": "April",
+      "image": "/certifications/Adobe Experience Manager_page-0001.jpg"
+    }
+  ]
+} 
