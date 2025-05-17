@@ -9,6 +9,9 @@ import { Suspense } from "react"
 import Loading from "./components/loading"
 import ProfileImage from "./components/profile-image"
 
+// Add base path for images
+const basePath = process.env.NODE_ENV === 'production' ? '/sumedha-parande-portfolio' : ''
+
 export default function Home() {
   return (
     <Suspense fallback={<Loading />}>
@@ -798,63 +801,63 @@ export default function Home() {
                     issuer: "AWS", 
                     year: "2023",
                     month: "December",
-                    image: "/certifications/AWS Certified Cloud Practitioner_page-0001.jpg"
+                    image: `${basePath}/certifications/AWS Certified Cloud Practitioner_page-0001.jpg`
                   },
                   { 
                     title: "MasterClass Software Testing with Jira & Agile", 
                     issuer: "Udemy", 
                     year: "2023",
                     month: "November",
-                    image: "/certifications/MasterClass Software Testing with Jira & Agile.jpg"
+                    image: `${basePath}/certifications/MasterClass Software Testing with Jira & Agile.jpg`
                   },
                   { 
                     title: "Java SE8 Developer", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "October",
-                    image: "/certifications/Java SE8 Developer_page-0001.jpg"
+                    image: `${basePath}/certifications/Java SE8 Developer_page-0001.jpg`
                   },
                   { 
                     title: "MySQL Associate", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "September",
-                    image: "/certifications/MySQL Associate_page-0001.jpg"
+                    image: `${basePath}/certifications/MySQL Associate_page-0001.jpg`
                   },
                   { 
                     title: "JavaScript Developer", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "August",
-                    image: "/certifications/JavaScript Developer_page-0001.jpg"
+                    image: `${basePath}/certifications/JavaScript Developer_page-0001.jpg`
                   },
                   { 
                     title: "Selenium Webdriver", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "July",
-                    image: "/certifications/Selenium Webdriver.jpeg"
+                    image: `${basePath}/certifications/Selenium Webdriver.jpeg`
                   },
                   { 
                     title: "API Testing with Postman", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "June",
-                    image: "/certifications/API_Testing_With_Postman.jpeg"
+                    image: `${basePath}/certifications/API_Testing_With_Postman.jpeg`
                   },
                   { 
                     title: "Learn Test Management Using HP ALM", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "May",
-                    image: "/certifications/Learn Test Management Using HP ALM.jpeg"
+                    image: `${basePath}/certifications/Learn Test Management Using HP ALM.jpeg`
                   },
                   { 
                     title: "Adobe Experience Manager", 
                     issuer: "Infosys", 
                     year: "2022",
                     month: "April",
-                    image: "/certifications/Adobe Experience Manager_page-0001.jpg"
+                    image: `${basePath}/certifications/Adobe Experience Manager_page-0001.jpg`
                   },
                 ].map((cert, index) => (
                   <Card key={index} className="shadow-md hover:shadow-lg transition-shadow border-purple-100 overflow-hidden group">
