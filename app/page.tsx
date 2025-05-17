@@ -33,11 +33,12 @@ export default function Home() {
                   </a>
                 ))}
               </nav>
-              <Button variant="outline" size="sm" className="hidden md:flex border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105">
+              <Button variant="outline" size="sm" className="hidden md:flex border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105 group">
                 <Download className="mr-2 h-4 w-4" />
                 <a href={`${basePath}/Sumedhe_Parande_Resume.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center">
                   Resume
                 </a>
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
