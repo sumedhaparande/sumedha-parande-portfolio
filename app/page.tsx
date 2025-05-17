@@ -9,7 +9,7 @@ import { Suspense } from "react"
 import Loading from "./components/loading"
 import ProfileImage from "./components/profile-image"
 
-// Add base path for images
+// Add base path for images and assets
 const basePath = process.env.NODE_ENV === 'production' ? '/sumedha-parande-portfolio' : ''
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
               </nav>
               <Button variant="outline" size="sm" className="hidden md:flex border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105">
                 <Download className="mr-2 h-4 w-4" />
-                <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <a href={`${basePath}/Sumedhe_Parande_Resume.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center">
                   Resume
                 </a>
               </Button>
@@ -79,7 +79,7 @@ export default function Home() {
                   </Button>
                   <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50 transition-all hover:scale-105 group">
                     <Download className="mr-2 h-4 w-4" />
-                    <a href="/Sumedhe_Parande_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                    <a href={`${basePath}/Sumedhe_Parande_Resume.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center">
                       Download CV
                     </a>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
